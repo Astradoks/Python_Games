@@ -73,7 +73,7 @@ def draw(win, completeSnake):
 
     #Print restart text
     restartTextRect = restartText.get_rect()
-    restartTextRect.center = (sizeX // 2, (sizeY // 2) - 30)
+    restartTextRect.center = (sizeX // 2, (sizeY // 2) + 30)
     win.blit(restartText, restartTextRect)
 
     #Refresh the screen
@@ -161,7 +161,7 @@ while run:
             for block in completeSnake[1:]:
                 if snakeBlock.collition(block):
                     endText = fontEnd.render('Game Over', True, (255, 255, 255))
-                    restartText = fontRestart.render('Press R to restart', True, (255, 255, 255))
+                    restartText = fontRestart.render('Press r to restart', True, (255, 255, 255))
                     lose = True
 
         #infinite move through the walls
